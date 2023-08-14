@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     node: true
   },
-  extends: ['plugin:react/recommended', 'plugin:react/jsx-runtime', 'airbnb'],
+  extends: ['plugin:react/recommended', 'plugin:react/jsx-runtime', 'airbnb', 'prettier'],
   overrides: [
     {
       env: {
@@ -22,6 +22,7 @@ module.exports = {
   },
   rules: {
     'react/react-in-jsx-scope': 0,
+    'quotes': ['error', 'single', { 'allowTemplateLiterals': true }],
     'comma-dangle': [
       'error',
       {

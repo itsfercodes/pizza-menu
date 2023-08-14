@@ -1,11 +1,18 @@
 import React from 'react';
 
-const Pizza = () => (
-  <div>
-    <img src="pizzas/focaccia.jpg" alt="Pizza focaccia" />
-    <h2>Focaccia</h2>
-    <p>Bread with italian olive oil and rosemary</p>
-  </div>
-);
+// eslint-disable-next-line react/prop-types
+const Pizza = ({ pizzaObject: { name, photoName, ingredients, price } }) => {
+  console.log();
+  return (
+    <li className="pizza">
+      <img src={photoName} alt={name} />
+      <div>
+        <h3>{name}</h3>
+        <p>{ingredients}</p>
+        <span>{price}</span>
+      </div>
+    </li>
+  );
+};
 
 export default Pizza;
